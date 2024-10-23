@@ -1,51 +1,35 @@
-<ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button default-href="#"></ion-back-button>
-    <ion-title>Back</ion-title>
-  </ion-buttons>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#">Back </ion-back-button>
+      <ion-title>Back</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>Add </ion-button>
+      <ion-button>List </ion-button>
+      <ion-button>Logout </ion-button>
+    </ion-buttons>
 
-  <ion-buttons slot="end">
-    <ion-button> List </ion-button>
-    <ion-button> Add </ion-button>
-    <ion-button> Logout </ion-button>
-  </ion-buttons>
-
-  <ion-title class="ion-text-center">Start / End Buttons</ion-title>
-</ion-toolbar>
-
-<ion-content [fullscreen]="true">
-  <ion-title>We propose these courses </ion-title>
-  <ion-list [inset]="true">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>We propose these courses</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        @for (item of list; track $index) {
-
-        <ion-list>
-          <ion-item
-            (click)="setOpen(true)"
-            [routerLink]="['/tabs/tab2', item.value]"
-          >
-            <ion-thumbnail slot="start">
-              <img
-                alt="Silhouette of mountains"
-                src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-              />
-            </ion-thumbnail>
-            <ion-label>{{item.name}}</ion-label>
-          </ion-item>
-          
-        </ion-list>
-        }
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
-  <ion-toast
-    [isOpen]="isToastOpen"
-    message="This toast will close in 5 seconds"
-    [duration]="5000"
-    (didDismiss)="setOpen(false)"
-  ></ion-toast>
+    <ion-title class="ion-text-center">List/Add Courses</ion-title>
+  </ion-toolbar>
+</ion-header> 
+<ion-content>
+  <ion-card>
+    <ion-card-header> Hello </ion-card-header>
+    <ion-card-content>
+      @for (item of list; track $index) {
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>{{item.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+      }
+    </ion-card-content>
+  </ion-card>
 </ion-content>
