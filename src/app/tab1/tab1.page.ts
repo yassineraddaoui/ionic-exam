@@ -13,13 +13,13 @@ export class Tab1Page {
   }
   list = [
     {
-      name: 'Google',
-      value: 'google',
+      name: 'Java',
+      value: 'java',
       image: '	https://ionicframework.com/docs/img/demos/thumbnail.svg',
     },
     {
-      name: 'Facebook',
-      value: 'facebook',
+      name: 'Angular',
+      value: 'angular',
       image: '	https://ionicframework.com/docs/img/demos/thumbnail.svg',
     },
     {

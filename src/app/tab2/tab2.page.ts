@@ -8,8 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Tab2Page {
 
-  id=this.routes.snapshot.paramMap.get('id');
-  
-  constructor(private routes:ActivatedRoute) {}
+  id=this.routes.snapshot.paramMap.get('id') || 'Tab 2';
+  constructor(private routes:ActivatedRoute) {
+
+  }
 
 }

@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: ':id',
     component: Tab2Page,
+  },
+  {
+    path: '',
+    component: Tab2Page,
   }
 ];
 
